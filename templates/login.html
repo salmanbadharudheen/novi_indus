@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+
+        .abc{
+            padding-left: 400px;
+			padding-bottom: 200px;
+			padding-right: 400px;
+			padding-top: 100px;
+			text-underline-position: under;
+			color:white;
+			}
+	</style>
+    <meta charset="UTF-8">
+    <title>login</title>
+</head>
+<body style="background-image: url(https://wallpaperaccess.com/full/2593044.jpg); background-repeat: no-repeat;">
+
+
+<form action="login" method="POST">
+    {% csrf_token %}
+
+<div class="abc">
+<label for="username"><b>Username</b></label>
+<input type="text" placeholder="Enter ur name" name="username" required>
+<br>
+<label for="password"><b>password</b></label>
+<input type="password"placeholder="confirm ur password"name="password"required><br>
+<input type="submit">
+</div>
+</form>
+
+</body>
+</html>

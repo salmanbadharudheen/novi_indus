@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		b{
+			color: white;
+			font-size:25px;
+			color:white;
+
+		}
+		.abcd{
+			padding-left: 400px;
+			padding-bottom: 200px;
+			padding-right: 400px;
+			padding-top: 100px;
+			text-underline-position: under;
+
+		}
+
+
+		h1{
+			color:white;
+			text-align: center;
+			font-size: 60px;
+
+			font-family: bold;
+
+
+		}
+		text{
+			color: white;
+		}
+		label {
+
+  width: 150px;
+  display: inline-block;
+  size: 80px;
+  margin: 7px;
+
+}
+submit{
+	color: white;
+	background-color: red;
+}
+
+
+	</style>
+	<title>text design</title>
+</head>
+<body style="background-image: url(https://wallpaperaccess.com/full/2593044.jpg); background-repeat: no-repeat;">
+
+	<h1>Register</h1>
+
+<form action="/" method="post">
+{% csrf_token %}
+
+
+<div class="abcd">
+
+
+<label for="username"><b>Username</b></label>
+<input type="text" placeholder="Enter ur name" name="username" required>
+<br>
+<label for="firstname"><b>firstname   </b></label>
+<input type="text" placeholder="Enter ur firstname" name="firstname"  required>
+<br>
+<label for="lastname"><b>lastname</b></label>
+<input type="text"placeholder="enter ur lastname" name="lastname"required>
+<br>
+<label for="email"><b>email</b></label>
+<input type="email"placeholder="enter ur email" name="email"required>
+<br>
+<label for="password"><b>password</b></label>
+<input type="password"placeholder="enter ur pass" name="password"required><br>
+
+<label for="cpassword"><b>cpassword</b></label>
+<input type="password"placeholder="confirm ur password"name="cpassword"required><br>
+
+
+<input type="submit">
+{% for msg in messages %}
+{{msg}}
+{% endfor %}
+</div>
+
+</form>
+
+
+
+</body>
+</html>
